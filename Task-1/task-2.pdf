@@ -1,0 +1,28 @@
+Lab Task
+
+1. Ceate a database named as "Customer"
+2. Create a table named as "Personal_Information" with the following columns:
+	a. Customer_ID  (Primary key)
+	b. First_Name
+	c. Last_Name
+	d. Email
+	e. Phone
+	f. City_Name
+3. Create a table named as "Sales_Item" with the following columns:
+	a. Item_Code   (Primary Key)
+	b. Item_Name (Gala, Sooper, Digestive etc.)
+	c. Customer_ID
+4. Create a table named as " Sales" with the following columns:
+	a. Sales_Id   (Primary key)
+	b. Sales_Quantity
+	b  Unit_Price	
+	c. Sales_Date
+	d. Item_Code
+	e. Customer_Code
+5. Insert just three records in each table
+6. Use proper data type for each column.
+7. Write a query to see all records from all three tables.
+8. Write a query to see only the list of Customer_ID, Name and Phone.
+9. Write a query to see list of all email with the Customer name.
+10. Show the list of Item_code and Item_Name.
+11. Total sale of first Item_code

@@ -1,0 +1,17 @@
+Use Customer;
+INSERT INTO Personal_Information(Customer_Id,First_Name,Last_Name,Email,Phone,City_Name) VALUES ('morning12','Ali','Ahmad','aliahmad0@gmail.com','03145678990','Lahore');
+INSERT INTO Personal_Information(Customer_Id,First_Name,Last_Name,Email,Phone,City_Name) VALUES ('evening08','Ali','Azam','aliazam090@gmail.com','03105978190','Karachi'),('night07','Mustafa','Ali','mustafa56@hotmail.com','03245678901','Kasur');
+Select * FROM Personal_Information;
+SELECT * FROM Sales_Item;
+INSERT INTO Sales_Item VALUES('gh34','galon','12thcs'),('f123','Fan','34gs'),('fr34','Banana','f345');
+SELECT * FROM Sales_Item;
+Select * FROM Sales;
+DROP Table Sales;
+CREATE TABLE Sales(Sales_Id VARCHAR(30) PRIMARY KEY,Sales_Quantity VARCHAR(20),Unit_Price VARCHAR(20),Sales_Date DATE,Item_Code VARCHAR(20),Customer_Code VARCHAR(20));
+INSERT INTO Sales(Sales_Id,Sales_Quantity,Unit_Price,Sales_Date,Item_Code,Customer_Code) VALUES ('ghr345','34','50','2021-09-12','ger12','k56');
+INSERT INTO Sales(Sales_Id,Sales_Quantity,Unit_Price,Sales_Date,Item_Code,Customer_Code) VALUES ('fhj45','12','40','2021-06-12','hjer12','s56');
+INSERT INTO Sales(Sales_Id,Sales_Quantity,Unit_Price,Sales_Date,Item_Code,Customer_Code) VALUES ('rth345','134','55','2021-05-12','geer12','l56');
+SELECT * FROM Sales;
+SELECT * FROM Sales_Item,Sales,Personal_Information;
+SELECT Sales_Item.Item_Code,Sales_Item.Item_Name FROM Sales_Item;
+SELECT Sales_Quantity FROM Sales where Customer_Code='k56';
