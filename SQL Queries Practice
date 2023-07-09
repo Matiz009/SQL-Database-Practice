@@ -1,0 +1,79 @@
+Use matiz;/*query to use/select a database*/
+CREATE TABLE student (/* query to create a table*/
+    student_id INT PRIMARY KEY,
+    name VARCHAR(20),
+    major VARCHAR(30)
+);
+DESCRIBE student;
+CREATE TABLE student (/* query to create a table*/
+    student_id INT PRIMARY KEY,
+    name VARCHAR(20) NOT NULL,
+    major VARCHAR(30) DEFAULT 'TBD'
+);
+DROP TABLE student_clone;/* query to drop the table*/
+ALTER TABLE student ADD COLUMN gpa DECIMAL(3,2);
+ALTER TABLE student DROP COLUMN gpa;
+INSERT INTO student VALUES(/* Insering data into student column*/
+1,
+"Kate",
+"Biology"
+);
+INSERT INTO student VALUES(/* Insering data into student column*/
+2,
+"Ronald",
+"CS"
+);
+INSERT INTO student(student_id,name) VALUES(/* Insering data into student column*/
+5,
+"Dustin"
+);
+INSERT INTO student VALUES(/* Insering data into student column*/
+5,
+"Julie",
+"CHEMISTRY"
+);
+SELECT * FROM student;
+
+INSERT INTO student(student_id,name) VALUES(3,'Stewie');
+DROP TABLE student;
+
+/*UPDATING*/
+UPDATE student SET major = 'Bio'
+ WHERE major = 'Biology';
+ UPDATE student SET major = 'TBD'
+ WHERE name = 'Susan';
+ UPDATE student SET major = 'Undecided'
+ WHERE student_id = 3 OR student_id=5;
+
+UPDATE student set major = 'TBD', name = 'Tom'
+where major='Undecided';
+
+/*DELETING*/
+DELETE FROM student WHERE student_id=5;
+
+/*SELECT QUERIES*/
+
+SELECT name FROM student
+WHERE student_id = 1;
+
+SELECT name FROM student
+WHERE student_id < 3;
+
+SELECT * FROM student WHERE major='Chemistry' 
+ORDER BY name DESC LIMIT 1;
+
+
+SELECT * FROM student
+ORDER BY student_id,student_id ASC LIMIT 3;
+
+SELECT name FROM student
+WHERE student_id IN(1,3,5) LIMIT 2;
+
+SELECT name,major FROM student
+WHERE student_id IN(1,3,5) OR major IN('CS','Chemistry')
+ORDER BY name DESC LIMIT 2;
+
+SELECT * FROM student
+WHERE name NOT IN('Tom') AND student_id <4
+ORDER BY major DESC LIMIT 2;
+
